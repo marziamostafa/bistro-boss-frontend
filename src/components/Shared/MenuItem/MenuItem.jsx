@@ -1,8 +1,14 @@
 
-const MenuItem = () => {
+const MenuItem = ({ item }) => {
+    const { name, image, recipe, price } = item;
     return (
-        <div>
-
+        <div className="flex">
+            <img src={image} alt="" />
+            <div>
+                <h3>{name}------------</h3>
+                <p>{recipe}</p>
+            </div>
+            <p>{price}</p>
         </div>
     );
 };
