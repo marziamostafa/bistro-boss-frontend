@@ -5,12 +5,12 @@ import "../../Styles/FeaturedMenu.css"
 
 const FeaturedMenu = () => {
     return (
-        <div className="featured-item">
+        <div className="featured-item text-white pt-6 my-20">
             <SectionTitle
                 heading="Featured Item"
                 subHeading="Check it out"
             />
-            <div className="md:flex justify-center items-center py-8 px-16">
+            <div className="md:flex justify-center items-center pb-20 pt-12 px-36">
                 <div>
                     <img src={featuredImg} alt="" />
                 </div>
