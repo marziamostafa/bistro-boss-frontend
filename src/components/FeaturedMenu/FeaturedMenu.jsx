@@ -1,4 +1,4 @@
-import SectionTitle from "../SectionTitle/SectionTitle";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import featuredImg from "../../assets/home/featured.jpg"
 import "../../Styles/FeaturedMenu.css"
 
