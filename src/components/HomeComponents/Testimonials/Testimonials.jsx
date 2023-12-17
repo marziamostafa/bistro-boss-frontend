@@ -1,4 +1,4 @@
-import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -21,7 +21,7 @@ const Testimonials = () => {
     }, [])
     //console.log(reviews)
     return (
-        <div className="my-20">
+        <section className="my-20">
             <SectionTitle
                 heading="Testimonials"
                 subHeading="What our client say?"
@@ -48,7 +48,7 @@ const Testimonials = () => {
 
             </Swiper>
 
-        </div>
+        </section>
     );
 };
 

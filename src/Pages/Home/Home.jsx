@@ -1,9 +1,10 @@
-import Banner from "../../components/Banner/Banner";
-import Category from "../../components/Category/Category";
-import FeaturedMenu from "../../components/FeaturedMenu/FeaturedMenu";
-import PopularMenu from "../../components/PopularMenu/PopularMenu";
-import Testimonials from "../../components/Testimonials/Testimonials";
+
 import { Helmet } from 'react-helmet-async';
+import Banner from '../../components/HomeComponents/Banner/Banner';
+import Category from '../../components/HomeComponents/Category/Category';
+import PopularMenu from '../../components/HomeComponents/PopularMenu/PopularMenu';
+import FeaturedMenu from '../../components/HomeComponents/FeaturedMenu/FeaturedMenu';
+import Testimonials from '../../components/HomeComponents/Testimonials/Testimonials';
 
 const Home = () => {
     return (

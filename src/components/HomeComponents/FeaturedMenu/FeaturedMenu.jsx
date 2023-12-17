@@ -1,6 +1,6 @@
-import SectionTitle from "../Shared/SectionTitle/SectionTitle";
-import featuredImg from "../../assets/home/featured.jpg"
-import "../../Styles/FeaturedMenu.css"
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import featuredImg from "../../../assets/home/featured.jpg"
+import "../../../Styles/FeaturedMenu.css"
 
 
 const FeaturedMenu = () => {
