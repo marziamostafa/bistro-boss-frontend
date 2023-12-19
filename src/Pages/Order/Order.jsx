@@ -1,8 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import orderImg from '../../assets/shop/banner2.jpg'
 import Cover from "../../components/Shared/Cover/Cover";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import { useState } from "react";
+
 
 const Order = () => {
+    const [tabIndex, setTabIndex] = useState(0)
     return (
         <div>
             <Helmet>
@@ -11,11 +16,14 @@ const Order = () => {
             <Cover bgImg={orderImg}
                 title="Order Food"
             />
-            <div role="tablist" className="tabs tabs-lifted">
-                <a role="tab" className="tab">Tab 1</a>
-                <a role="tab" className="tab tab-active">Tab 2</a>
-                <a role="tab" className="tab">Tab 3</a>
-            </div>
+            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+                <TabList>
+                    <Tab>Title 1</Tab>
+                    <Tab>Title 2</Tab>
+                </TabList>
+                <TabPanel></TabPanel>
+                <TabPanel></TabPanel>
+            </Tabs>
         </div>
     );
 };
