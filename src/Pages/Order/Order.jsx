@@ -4,10 +4,12 @@ import Cover from "../../components/Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
+import useMenu from "../../Hooks/useMenu";
 
 
 const Order = () => {
     const [tabIndex, setTabIndex] = useState(0)
+    const [menu] = useMenu();
     return (
         <div>
             <Helmet>
@@ -18,9 +20,15 @@ const Order = () => {
             />
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
-                    <Tab>Title 1</Tab>
-                    <Tab>Title 2</Tab>
+                    <Tab>Salad</Tab>
+                    <Tab>Pizza</Tab>
+                    <Tab>Soup</Tab>
+                    <Tab>Dessert</Tab>
+                    <Tab>Drinks</Tab>
                 </TabList>
+                <TabPanel></TabPanel>
+                <TabPanel></TabPanel>
+                <TabPanel></TabPanel>
                 <TabPanel></TabPanel>
                 <TabPanel></TabPanel>
             </Tabs>

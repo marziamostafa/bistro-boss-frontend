@@ -5,19 +5,14 @@ import dessertImage from '../../../assets/menu/dessert-bg.jpeg'
 import pizzaImage from '../../../assets/menu/pizza-bg.jpg'
 import soupImage from '../../../assets/menu/soup-bg.jpg'
 import saladImage from '../../../assets/menu/salad-bg.jpg'
-import useMenu from '../../../Hooks/useMenu';
 import SectionTitle from '../../../components/Shared/SectionTitle/SectionTitle';
 import MenuCategory from '../../../components/MenuComponents/MenuCategory/MenuCategory';
+import useMenuItems from '../../../Hooks/useMenuItems';
 
 
 
 const Menu = () => {
-    const [menu] = useMenu();
-    const dessert = menu.filter(item => item.category === "dessert")
-    const soup = menu.filter(item => item.category === "soup")
-    const salad = menu.filter(item => item.category === "salad")
-    const pizza = menu.filter(item => item.category === "pizza")
-    const offered = menu.filter(item => item.category === "offered")
+    const [dessert, salad, pizza, soup, offered] = useMenuItems();
     return (
         <div>
 
