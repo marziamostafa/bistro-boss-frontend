@@ -13,7 +13,7 @@ const PopularMenu = () => {
         <section className="mb-12">
             <SectionTitle
                 heading="From our menu"
-                subHeading="Popolar Items"
+                subHeading="Popular Items"
             />
             <div className="grid md:grid-cols-2 gap-10 ">
                 {
