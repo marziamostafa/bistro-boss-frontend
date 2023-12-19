@@ -4,12 +4,12 @@ import Cover from "../../components/Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
-import useMenu from "../../Hooks/useMenu";
+import useMenuItems from "../../Hooks/useMenuItems";
 
 
 const Order = () => {
     const [tabIndex, setTabIndex] = useState(0)
-    const [menu] = useMenu();
+    const [dessert, salad, pizza, soup, offered] = useMenuItems();
     return (
         <div>
             <Helmet>
