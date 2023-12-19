@@ -2,6 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import Cover from '../../../components/Shared/Cover/Cover';
 import menuImage from '../../../assets/menu/banner3.jpg'
 import dessertImage from '../../../assets/menu/dessert-bg.jpeg'
+import pizzaImage from '../../../assets/menu/pizza-bg.jpg'
+import soupImage from '../../../assets/menu/soup-bg.jpg'
+import saladImage from '../../../assets/menu/salad-bg.jpg'
 import useMenu from '../../../Hooks/useMenu';
 import SectionTitle from '../../../components/Shared/SectionTitle/SectionTitle';
 import MenuCategory from '../../../components/MenuComponents/MenuCategory/MenuCategory';
@@ -34,6 +37,14 @@ const Menu = () => {
             {/* dessert items */}
             <MenuCategory items={dessert} title="Dessert" coverImg={dessertImage} />
 
+            {/* pizza items */}
+            <MenuCategory items={pizza} title="Pizza" coverImg={pizzaImage} />
+
+            {/* salad items */}
+            <MenuCategory items={salad} title="Salad" coverImg={saladImage} />
+
+            {/* soup items */}
+            <MenuCategory items={soup} title="Soup" coverImg={soupImage} />
         </div>
     );
 };

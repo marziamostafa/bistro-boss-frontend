@@ -3,12 +3,12 @@ import MenuItem from "../../Shared/MenuItem/MenuItem";
 
 const MenuCategory = ({ items, title, coverImg }) => {
     return (
-        <div>
+        <div className="pt-8">
             {title && <Cover
                 bgImg={coverImg}
-                title="Our menu"
+                title={title}
             />}
-            <div className="grid md:grid-cols-2 gap-10 ">
+            <div className="grid md:grid-cols-2 gap-10 my-16">
 
                 {
                     items.map(item => (
