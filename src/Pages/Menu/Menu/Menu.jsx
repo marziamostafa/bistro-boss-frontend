@@ -13,6 +13,7 @@ import useMenuItems from '../../../Hooks/useMenuItems';
 
 const Menu = () => {
     const [dessert, salad, pizza, soup, offered] = useMenuItems();
+
     return (
         <div>
 

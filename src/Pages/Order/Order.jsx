@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import { useState } from "react";
 import useMenuItems from "../../Hooks/useMenuItems";
 import OrderItemTab from "../../components/OrderComponents/OrderItemTab/OrderItemTab";
+import { useParams } from "react-router-dom";
 
 
 
@@ -13,6 +14,8 @@ import OrderItemTab from "../../components/OrderComponents/OrderItemTab/OrderIte
 const Order = () => {
     const [tabIndex, setTabIndex] = useState(0)
     const [dessert, salad, pizza, soup, drinks] = useMenuItems();
+    const { category } = useParams();
+    console.log(category)
     return (
         <div>
             <Helmet>
