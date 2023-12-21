@@ -9,9 +9,10 @@ import OrderItemTab from "../../components/OrderComponents/OrderItemTab/OrderIte
 
 
 
+
 const Order = () => {
     const [tabIndex, setTabIndex] = useState(0)
-    const [dessert, salad, pizza, soup, offered] = useMenuItems();
+    const [dessert, salad, pizza, soup, drinks] = useMenuItems();
     return (
         <div>
             <Helmet>
@@ -31,10 +32,18 @@ const Order = () => {
                 <TabPanel>
                     <OrderItemTab items={salad} />
                 </TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
-                <TabPanel></TabPanel>
+                <TabPanel>
+                    <OrderItemTab items={pizza} />
+                </TabPanel>
+                <TabPanel>
+                    <OrderItemTab items={soup} />
+                </TabPanel>
+                <TabPanel>
+                    <OrderItemTab items={dessert} />
+                </TabPanel>
+                <TabPanel>
+                    <OrderItemTab items={drinks} />
+                </TabPanel>
             </Tabs>
         </div>
     );
