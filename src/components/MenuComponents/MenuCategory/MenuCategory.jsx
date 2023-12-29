@@ -24,7 +24,7 @@ const MenuCategory = ({ items, title, coverImg }) => {
             {title &&
                 <div className="card-actions justify-center">
                     <Link to={`/order/${title}`}>
-                        <button className="btn btn-outline border-0 border-b-4">Order Now</button>
+                        <button className="btn btn-outline border-0 border-b-4 bg-slate-200 ">Order Now</button>
                     </Link>
                 </div>
             }
