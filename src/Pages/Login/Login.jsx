@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { useEffect, useRef } from 'react';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 
 const Login = () => {
-
+    const captchaRef = useRef(null);
     useEffect(() => {
         loadCaptchaEnginge(6);
     }, [])
@@ -17,6 +17,15 @@ const Login = () => {
         console.log(email, password)
     }
 
+    const handleValidateCaptcha = () => {
+        const value = captchaRef.current.value;
+        if (validateCaptcha(value) == true) {
+            alert('Captcha Matched');
+        }
+        else {
+            alert('Captcha Does Not Match');
+        }
+    }
 
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -52,8 +61,8 @@ const Login = () => {
                             <label className="label">
                                 <LoadCanvasTemplate />
                             </label>
-                            <input type="text" name="captcha" placeholder="captcha" className="input input-bordered" required />
-
+                            <input type="text" ref={captchaRef} name="captcha" placeholder="Type the captchat above" className="input input-bordered" required />
+                            <button onClick={handleValidateCaptcha} className="btn btn-outline btn-xs mt-2">Validate</button>
                         </div>
 
                         <div className="form-control mt-6">
