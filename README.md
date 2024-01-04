@@ -2,6 +2,7 @@ react tab
 react helmet
 react simple captcha
 react hook form
+sweetalert2
 
 
 
