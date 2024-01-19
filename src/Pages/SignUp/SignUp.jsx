@@ -33,6 +33,8 @@ const SignUp = () => {
                     </div>
                     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+
+                            {/* name */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -41,6 +43,18 @@ const SignUp = () => {
                                 />
                                 {errors.name && <span className="text-red-500">Name is required</span>}
                             </div>
+
+                            {/* photo */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo URL</span>
+                                </label>
+                                <input type="text" placeholder="Photo URL" className="input input-bordered" {...register("photoUrl", { required: true })}
+                                />
+                                {errors.photoUrl && <span className="text-red-500">Photo URL is required</span>}
+                            </div>
+
+                            {/* email */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -48,6 +62,8 @@ const SignUp = () => {
                                 <input type="email" name="email" placeholder="email" className="input input-bordered" {...register("email", { required: true })} />
                                 {errors.email && <span className="text-red-500">Email is required</span>}
                             </div>
+
+                            {/* password */}
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
